@@ -32,6 +32,3 @@ Normalement lorsque vous lancerez l’application avec le fichier gestionnaireOr
 Rien d’autres ne sera nécessaires sauf lancer l’hébergement  à l’aide de Flask et de votre environnement virtuel.
 
 J'espère que ces modifications permettront l’acquisition du module, je reste disponible si vous avez d’autres remarques.
-
-Bien à vous,
-Paiva Alexy

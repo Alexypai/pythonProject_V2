@@ -1,0 +1,39 @@
+{% include 'Common_scripts/nav.html' %}
+<br>
+<br>
+ <body>
+<div class="row">
+    <div class="col-2">
+    </div>
+    <br>
+    <br>
+    <div class="col-8" style="border : solid; border-color: rgb(255,121,0)">
+    <br>
+    <br>
+        <form  action="{{ url_for('Crea') }}" method="post">
+            <h1>Nom du nouveau projet</h1>
+            <br>
+            <input class="form-control" placeholder="Nom du projet" type="text" id="team_name" name="team_name">
+            <br>
+            <button style="background-color: rgb(255,121,0)" class="btn btn-large btn-block" type="submit">Crée</button>
+            <br>
+        </form>
+    <br>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category , message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    <br>
+    </div>
+    <div class="col-2">
+    </div>
+</div>
+
+</body>
+
+
+
+{% include 'Common_scripts/footer.html' %}

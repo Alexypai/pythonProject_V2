@@ -1,0 +1,33 @@
+{% include 'Common_scripts/nav.html' %}
+<br>
+<div class="row" >
+    <div class="col-2"></div>
+    <div class="col-8">
+        <h1>Gestionnaire et annuaire d'equipe d'<span style="color: rgb(255,121,0)">Orange</span> </h1>
+        <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category , message in messages %}
+                            <div class="alert alert-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+        <br>
+        <p>Ce Gestionnaire a été crée par Mercier Flavien et Paiva Alexy</p>
+        <p>Vous pouvez accédez aux fonctionalité de l'outil web grâce au menu en haut de page : </p>
+        <ul class="list-group">
+          <li class="list-group-item"><span style="color: rgb(255,121,0)" >'Gestionnaire'</span> ou 'Home' permet de revenir à cette page  </li>
+          <li class="list-group-item">Annuaire : permet d'effectuer une recherche d'employé grâce a son nom ou par défaut de vous afficher la liste de tous les employés répertorier </li>
+          <li class="list-group-item">Dans la liste 'Gestionnaire des projets' : vous retrouverez les fonctionnalité de gestion du site :</li>
+          <li class="list-group-item">'Crée un nouveau projet' vous permet de crée un nouveau projet en 2 étapes :
+          <br> Etape 1 : Nommer le nom du projet
+          <br> Etape 2 : Ajouter le nombre d'employés et leurs temps de travail néssesaire au bon fonctionnement du projet </li>
+          <li class="list-group-item">'Supprimer des projet(s) : vous permet de supprimer les projets qui sont terminer afin de libérer le temps des employés assigné au differents projets</li>
+            <li class="list-group-item">'Voir les projets et les utilisateurs liée aux projets' : vous permet de visualiser l'ensemble des projets et les personnes assignées a ses differents projets ainsi que leurs temps nécessaire  </li>
+            <li class="list-group-item">'deconexion : permet de vous déconnecter </li>
+        </ul>
+
+    </div>
+    <div class="col-2"></div>
+</div>
+{% include 'Common_scripts/footer.html' %}
